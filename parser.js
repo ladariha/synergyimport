@@ -35,7 +35,7 @@ function parseXML(xmlString) {
 function createModel(parsedData) {
     const p = new SynergyImport();
     const attr = parsedData.specification["$"];
-    p.setSpecification(attr.project, attr.version, parsedData.specification.title[0], parsedData.specification.description[0])
+    p.setSpecification(attr.author, attr.project, attr.version, parsedData.specification.title[0], parsedData.specification.description[0])
         .setSuites(parsedData.specification.suites);
     return Promise.resolve(p);
 }

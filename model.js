@@ -18,14 +18,15 @@ function SynergyImport() {
 let suiteOrder = 0;
 let tcOrder = 1;
 
-function SynergySpec(projectName, version, title, desc = "&nbsp;") {
+function SynergySpec(author, projectName, version, title, desc = "&nbsp;") {
     this.title = title;
     this.projectName = projectName;
     this.projectId = -1;
+    this.author = author;
     this.version = version;
     this.description = desc.length === 0 ? "&nbsp;" : desc;
     this.id = -1;
-    if (!util.isValidString(this.title) || !util.isValidString(this.description) || !util.isValidString(this.projectName) || !util.isValidString(this.version)) {
+    if (!util.isValidString(this.author) || !util.isValidString(this.title) || !util.isValidString(this.description) || !util.isValidString(this.projectName) || !util.isValidString(this.version)) {
         throw new Error(`Invalid specification object \n ${JSON.stringify(arguments)}`);
     }
 
@@ -37,6 +38,7 @@ SynergySpec.prototype.getPayload = function () {
         "desc": this.description,
         "version": this.version,
         "owner": "",
+        "author" : this.author,
         "id": -1,
         "isFavorite": 0,
         "simpleName": this.title,
@@ -106,8 +108,8 @@ SynergySuite.prototype.getPayload = function (specId) {
     };
 };
 
-SynergyImport.prototype.setSpecification = function (projectName, version, title, description) {
-    this.specification = new SynergySpec(projectName, version, title, description);
+SynergyImport.prototype.setSpecification = function (author, projectName, version, title, description) {
+    this.specification = new SynergySpec(author, projectName, version, title, description);
     return this;
 };
 
