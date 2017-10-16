@@ -5,7 +5,7 @@ const utils = require("./util");
 const parser = require("./parser");
 const importer = require("./importer");
 const os = require("os");
-const newLine = JSON.stringify(os.EOL);
+const newLine = os.EOL;
 
 let importerInst = null;
 const filePath = parsedArgs.src;
