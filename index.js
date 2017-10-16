@@ -28,6 +28,8 @@ parser
         if (importerInst) {
             importerInst.revert()
                 .then(() => process.exit(1), () => process.exit(1));
+        } else {
+            process.exit(1)
         }
 
     });
