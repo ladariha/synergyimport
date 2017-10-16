@@ -1,35 +1,35 @@
 <?xml version="1.0" standalone="yes" ?>
 <specification project="TestingProject" version="17.4.5" author="vriha11">
-    <title>My spec11</title>
-    <description><![CDATA[ <div>Ale</div> ]]></description>
+    <title>Book with secret recipes</title>
+    <description><![CDATA[ <div>Just an example of test specification to import.</div> ]]></description>
     <suites>
         <suite>
-            <title>My Suite</title>
-            <description><![CDATA[ <div>Suite desc</div> ]]></description>
+            <title>My Cook Book</title>
+            <description><![CDATA[ <div>This is a <b>sample description</b> of this test suite.</div>]]></description>
             <testCases>
                 <testCase>
-                    <title>My test case 1</title>
-                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
-                    <result><![CDATA[ This <b>works]]></result>
-                    <labels>comma,separated,list</labels> <!-- optional -->
+                    <title>Prepare sandwich</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Buy 1 bread, tomato and butter.</li>\n<li>Slice the bread.</li>\n<li>Spread the butter on the slice and salt softly.</li></ol></div>]]></steps>
+                    <result><![CDATA[ Delicious sandwich is ready.]]></result>
+                    <labels>manual,work,cooking</labels> <!-- optional -->
                     <duration>10</duration> <!-- in minutes, if missing 1 minute -->
                 </testCase>
                 <testCase>
-                    <title>My test caseXXXXXXX</title>
-                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
-                    <result><![CDATA[ This <b>works]]></result>
+                    <title>Prepare tea</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Boil some water.</li>\n<li>Pour the hot water into an empty cup with a tea bag.</li>\n</ol></div> ]]></steps>
+                    <result><![CDATA[ Cup with extremely hot content is prepared.]]></result>
                 </testCase>
             </testCases>
         </suite>
         <suite>
-            <title>My Suite1</title>
-            <description><![CDATA[ <div>Suite1 desc</div> ]]></description>
+            <title>Consume It All</title>
+            <description><![CDATA[ <div>Now let's eat and drink it.</div> ]]></description>
             <testCases>
                 <testCase>
-                    <title>My test case 2</title>
-                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
-                    <result><![CDATA[ This <b>works]]></result>
-                    <labels>comma,separated,list</labels> <!-- optional -->
+                    <title>Eat open sandwich</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Open your mouth.</li>\n<li>Insert a bite of open sandwich.</li>\n<li>Chew the bite for 15 seconds and swallow.</li>\n</ol></div> ]]></steps>
+                    <result><![CDATA[ Repeat 15 times, wait 15 minutes and your hunger is gone.]]></result>
+                    <labels>hunger,taste,food</labels> <!-- optional -->
                     <duration>1</duration> <!-- in minutes, if missing 1 minute -->
                 </testCase>
             </testCases>
