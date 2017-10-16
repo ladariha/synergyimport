@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="yes" ?>
-<specification project="TestingProject" version="17.4.5">
+<specification project="TestingProject" version="17.4.5" author="vriha11">
     <title>My spec11</title>
     <description><![CDATA[ <div>Ale</div> ]]></description>
     <suites>

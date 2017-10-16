@@ -91,7 +91,7 @@ Importer.prototype._createSpecification = function () {
     return this._makeRequest("/synergy/server/api/specification.php?mode=create&anonym=import", this.parsedData.specification.getPayload(), "POST")
         .then(response => {
             self.parsedData.specification.id = parseInt(/[0-9]+$/.exec(response)[0], 10);
-            self.specURL = `${self.baseURL}/synergy/client/app/#/specification/${self.parsedData.specification.id}/v/2`;
+            self.specURL = `http://${self.baseURL}/synergy/client/app/#/specification/${self.parsedData.specification.id}/v/2`;
             console.log(`Specification with id '${self.parsedData.specification.id}' created`);
         });
 };
