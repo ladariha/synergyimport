@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes" ?>
+<specification project="TestingProject" version="17.4.5">
+    <title>My spec11</title>
+    <description><![CDATA[ <div>Ale</div> ]]></description>
+    <suites>
+        <suite>
+            <title>My Suite</title>
+            <description><![CDATA[ <div>Suite desc</div> ]]></description>
+            <testCases>
+                <testCase>
+                    <title>My test case 1</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
+                    <result><![CDATA[ This <b>works]]></result>
+                    <labels>comma,separated,list</labels> <!-- optional -->
+                    <duration>10</duration> <!-- in minutes, if missing 1 minute -->
+                </testCase>
+                <testCase>
+                    <title>My test caseXXXXXXX</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
+                    <result><![CDATA[ This <b>works]]></result>
+                </testCase>
+            </testCases>
+        </suite>
+        <suite>
+            <title>My Suite1</title>
+            <description><![CDATA[ <div>Suite1 desc</div> ]]></description>
+            <testCases>
+                <testCase>
+                    <title>My test case 2</title>
+                    <steps><![CDATA[ <div><ol>\n<li>Step 1</li>\n<li>Step 2</li>\n</ol></div> ]]></steps>
+                    <result><![CDATA[ This <b>works]]></result>
+                    <labels>comma,separated,list</labels> <!-- optional -->
+                    <duration>1</duration> <!-- in minutes, if missing 1 minute -->
+                </testCase>
+            </testCases>
+        </suite>
+    </suites>
+</specification>
