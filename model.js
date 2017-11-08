@@ -88,7 +88,7 @@ function SynergySuite(title, desc = "&nbsp;", testCases = []) {
      *
      * @type {SynergyCase[]}
      */
-    this.testCases = testCases[0].testCase.map(x => new SynergyCase(x.title[0], x.steps[0], x.result[0], x.labels, x.duration));
+    this.testCases = !testCases[0].testCase ? [] : testCases[0].testCase.map(x => new SynergyCase(x.title[0], x.steps[0], x.result[0], x.labels, x.duration));
     if (!util.isValidString(this.title) || !util.isValidString(this.description)) {
         throw new Error(`Invalid test suite object \n ${JSON.stringify(arguments)}`);
     }
@@ -114,7 +114,7 @@ SynergyImport.prototype.setSpecification = function (author, projectName, versio
 };
 
 SynergyImport.prototype.setSuites = function (suites) {
-    this.suites = suites[0].suite.map(s => new SynergySuite(s.title[0], s.description[0], s.testCases));
+    this.suites = !suites[0].suite ? [] : suites[0].suite.map(s => new SynergySuite(s.title[0], s.description[0], s.testCases));
     return this;
 };
 
