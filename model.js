@@ -52,7 +52,7 @@ function SynergyCase(title, steps, result, labels = [], duration = 1) {
     this.steps = steps;
     this.result = result;
     this.order = ++tcOrder;
-    this.labels = labels.length === 1 ? labels[0].split(",") : labels; // uber ugly
+    this.labels = (labels.length === 1 ? labels[0].split(",") : labels).filter(x => x.length > 0); // uber ugly
     this.duration = parseInt(duration.constructor === Array ? duration[0] : duration, 10);// uber ugly #2
     this.id = -1;
     this.suiteId = -1;
